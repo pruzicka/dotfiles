@@ -21,3 +21,4 @@ brew install direnv
 brew install heroku
 brew install youtube-dl
 brew install xz
+brew install ripgrep

@@ -1,6 +1,13 @@
 let test#strategy = "vimterminal"
 let mapleader=","
+
 set rtp+=/usr/local/opt/fzf
+let g:fzf_layout = { 'down': '40%' }
+
+""""""
+" This allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
+set hidden
 
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
@@ -8,13 +15,20 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-nmap <C-O> :FZF<CR>
-
-"nmap <silent> <C-/>  :<Plug>NERDCommenterToggle
+nmap <C-P> :Files<CR>
+nmap <C-O> :Buffers<CR>
+nmap <C-I> :Rg<CR>
 
 "turn off highlight after seach
 nnoremap <CR> :nohlsearch<CR><CR>
 
-
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
+set grepprg=ack
+
+
+"call janus#disable_plugin('buffergator')
+call janus#disable_plugin('ack')
+call janus#disable_plugin('ctrlp')
+
