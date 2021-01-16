@@ -5,7 +5,4 @@ set grepprg=ack
 set tags=./tags
 set autoread
 
-
 call janus#disable_plugin('ctrlP')
-
-

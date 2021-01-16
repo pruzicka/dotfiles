@@ -7,7 +7,6 @@ let g:fzf_layout = { 'down': '40%' }
 """"""
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
-set hidden
 
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
@@ -18,6 +17,12 @@ nmap <silent> t<C-g> :TestVisit<CR>
 nmap <C-P> :Files<CR>
 nmap <C-O> :Buffers<CR>
 nmap <C-I> :Rg<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 "turn off highlight after seach
 nnoremap <CR> :nohlsearch<CR><CR>
@@ -26,9 +31,15 @@ nnoremap <CR> :nohlsearch<CR><CR>
 set foldmethod=indent
 set nofoldenable
 set grepprg=ack
+set relativenumber
+set hidden
+set nobackup
+set noswapfile
 
+au BufNewFile,BufRead,BufReadPost *.javascript set syntax=javascript
 
 "call janus#disable_plugin('buffergator')
 call janus#disable_plugin('ack')
 call janus#disable_plugin('ctrlp')
 
+let g:airline_powerline_fonts = 1
