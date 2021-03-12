@@ -1,8 +1,20 @@
 syntax enable
 colorscheme solarized
 colorscheme molokai
-set grepprg=ack
-set tags=./tags
-set autoread
+
+fun! ChangeToDark() "{{{
+  set background=dark
+  colorscheme nord
+endfun "}}}
+
+fun! ChangeToLight() "{{{
+  set background=light
+  colorscheme solarized
+endfun "}}}
+
+command! -nargs=* Dark call ChangeToDark()
+command! -nargs=* Light call ChangeToLight()
+
+
 
 call janus#disable_plugin('ctrlP')

@@ -27,14 +27,25 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 "turn off highlight after seach
 nnoremap <CR> :nohlsearch<CR><CR>
 
-"set foldmethod=syntax
-set foldmethod=indent
+" Folding
+set foldmethod=syntax
+set foldcolumn=1 "defines 1 col at window left, to indicate folding  
+let ruby_fold=1 "activate folding by JS syntax  
+let javaScript_fold=1 "activate folding by JS syntax  
+
+autocmd FileType eruby setlocal foldmethod=indent
+
+set foldlevelstart=99 "start file with all folds opened
+
 set nofoldenable
 set grepprg=ack
 set relativenumber
 set hidden
 set nobackup
 set noswapfile
+set grepprg=ack
+set tags=./tags
+set autoread
 
 au BufNewFile,BufRead,BufReadPost *.javascript set syntax=javascript
 
