@@ -1,10 +1,8 @@
 return {
   { "jesseduffield/lazygit" },
   { "BurntSushi/ripgrep" },
-  { "nvim-treesitter/nvim-treesitter" },
   { "sbdchd/neoformat" },
   { "ryanoasis/vim-devicons" },
-  { "lewis6991/gitsigns.nvim" },
   {
     "telescope.nvim",
     dependencies = {
