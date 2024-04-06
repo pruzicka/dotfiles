@@ -1,5 +1,11 @@
 [font.normal]
-family = "Hack Nerd Font"
+family = "FiraMono Nerd Font"
+# family = "Hack Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font Mono"
+# family = "MonaspiceNe Nerd Font"
+# family = "MonaspiceAr Nerd Font"
+# family = "MonaspiceAr Nerd Font Propo"
 style = "Regular"
 [font.offset]
 y = 8
