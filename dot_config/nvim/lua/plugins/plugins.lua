@@ -1,5 +1,6 @@
 return {
   { "jesseduffield/lazygit" },
+  { "lewis6991/gitsigns.nvim" },
   { "BurntSushi/ripgrep" },
   { "sbdchd/neoformat" },
   { "ryanoasis/vim-devicons" },
